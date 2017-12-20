@@ -19,14 +19,12 @@ class SettingsServiceProvider extends ServiceProvider
     public function boot(Factory $cache, Setting $settings)
     {
 
-        /* ADDED lines ***** */
-        $settings = $cache->remember('settings', 60, function() use ($settings)
-        {
-            return $settings->pluck('value', 'slug')->all();
-        });
+            $settings = $cache->remember('settings', 60, function() use ($settings)
+            {
+                return $settings->pluck('value', 'slug')->all();
+            });
 
-        config()->set('settings', $settings);
-        /* //ADDED lines ***** */
+            config()->set('settings', $settings);
 
     }
 

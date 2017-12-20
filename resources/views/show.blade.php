@@ -59,33 +59,54 @@
                 <div class="col-md-8 col-md-offset-2">
                     <div class="panel panel-default">
                         <div class="panel-heading text-center">
-                            <h2>Laravel Guestbook</h2>
+                            <h2>Laravel Site Settings</h2>
                         </div>
 
                         <div class="panel-body">
-                            <h3>Show Message</h3>
+                            <h3>Show Setting</h3>
                             <table class="table">
                                 <thead>
-                                    <tr>
-                                        <th>ID</th>
-                                        <th>Name</th>
-                                        <th>Message</th>
-                                        <th>Date</th>
-                                        <th>Action</th>
-                                    </tr>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Option</th>
+                                    <th>Slug</th>
+                                    <th>Value</th>
+                                    <th>Action</th>
+                                </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>{{ $message->id }}</td>
-                                        <td>{{ $message->name }}</td>
-                                        <td>{{ $message->message }}</td>
-                                        <td>{{ $message->created_at }}</td>
+                                        <td>{{ $setting->id }}</td>
+                                        <td>{{ $setting->option }}</td>
+                                        <td>{{ $setting->slug }}</td>
+                                        <td>{{ $setting->value }}</td>
                                         <td>
-                                            <a href="{{ url('/guestbook/'.$message->id.'/edit') }}">Edit</a> | 
-                                            <a href="{{ url('/guestbook/'.$message->id) }}">Show</a> | 
-                                            <a href="{{ url('/guestbook/'.$message->id.'/destroy') }}">Delete</a>
+                                            <a href="{{ url('/settings/'.$setting->id.'/edit') }}">Edit</a> |
+                                            <a href="{{ url('/settings/'.$setting->id) }}">Show</a> |
+                                            <a href="{{ url('/settings/'.$setting->id.'/delete') }}">Delete</a>
                                         </td>
                                     </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <h3>Usage</h3>
+                            <table class="table">
+                                <tbody>
+                                <tr>
+                                    <td>{{ config('settings.site_name') }}</td>
+                                </tr>
+                                <tr>
+                                    <td>{{ config('settings.site_url') }}</td>
+                                </tr>
+                                <tr>
+                                    <td>{{ config('settings.site_description') }}</td>
+                                </tr>
+                                <tr>
+                                    <td>{{ config('settings.contact_email') }}</td>
+                                </tr>
                                 </tbody>
                             </table>
                         </div>
