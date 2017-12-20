@@ -11,6 +11,7 @@
 <li>Run <strong>composer install</strong></li>
 <li>Run <strong>php artisan key:generate</strong></li>
 <li>There is migration and seeder file in project but you can have <code>Base table or view not found...</code> error while migrating. So try creating table with <strong>laravel-site-settings.sql</strong> file in the project. </li>
+<li>Because there is caching in setting, you can try updating any setting for triggering updating cache</li>
 <li>That's it - load the homepage</li>
 </ul>
 
