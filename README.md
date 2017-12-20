@@ -1,6 +1,6 @@
 <h3>An easy site settings example to show how to create a site settings page and cache the settings in laravel</h3>
 
-![Screenshot](https://raw.githubusercontent.com/yakuter/laravel-site-settings/master/laravel-site-settings-screenshot.png)
+![Screenshot](https://raw.githubusercontent.com/yakuter/laravel-site-settings/master/laravel-site-settings.png)
 
 <hr></hr>
 <h3>How to use</h3>
